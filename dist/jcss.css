@@ -1,0 +1,15 @@
+/* src/reset.css */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* src/jcss.css */
+body,
+div {
+  display: flex;
+  flex-direction: column;
+}
