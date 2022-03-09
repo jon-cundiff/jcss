@@ -24,3 +24,8 @@ body {
     text-rendering: optimizeSpeed;
     font-size: 10px;
 }
+
+ul,
+ol {
+    list-style: none;
+}
