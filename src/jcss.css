@@ -1,7 +1,3 @@
+@import url(./colors.css);
 @import url(./reset.css);
-
-body,
-div {
-    display: flex;
-    flex-direction: column;
-}
+@import url(./components/button.css);

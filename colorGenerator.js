@@ -4,10 +4,10 @@ const fs = require("fs");
 const buildCSS = (keys) => {
     const colorKeys = {
         primary: keys ? keys.primary || "#6e41e2" : "#6e41e2",
-        secondary: keys ? keys.secondary || "#48D8B9" : "#48D8B9",
+        secondary: keys ? keys.secondary || "#2daf93" : "#2daf93",
         info: keys ? keys.info || "#428bf9" : "#428bf9",
         danger: keys ? keys.danger || "#C7302B" : "#C7302B",
-        success: keys ? keys.sucess || "#27AE60" : "#27AE60",
+        success: keys ? keys.success || "#27AE60" : "#27AE60",
     };
 
     let cssString = ":root {\n";
@@ -20,9 +20,9 @@ const buildCSS = (keys) => {
     for (const [key, value] of Object.entries(colorKeys)) {
         const colorSwatch = chroma.scale(["white", value, "black"]).colors(21);
         appendCssVar(colorSwatch, key, 10);
-        appendCssVar(colorSwatch, key, 5, "disabled");
-        appendCssVar(colorSwatch, key, 13, "hover");
-        appendCssVar(colorSwatch, key, 15, "active");
+        appendCssVar(colorSwatch, key, 4, "lightest");
+        appendCssVar(colorSwatch, key, 8, "lighter");
+        appendCssVar(colorSwatch, key, 13, "dark");
     }
     cssString +=
         "\t--color-white: #fff;\n\t--color-gray-light: #f1f1f1;\n\t--color-gray-medium: #d4d4d4;\n\t--color-gray-dark: #6b6b6b;\n}";
