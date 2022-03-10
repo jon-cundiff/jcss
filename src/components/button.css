@@ -10,6 +10,21 @@
     color: var(--color-gray-dark);
 }
 
+.btn > i:not(:last-child) {
+    margin-right: 0.4rem;
+}
+
+.btn.icon-only,
+.btn.icon-circle {
+    padding: 10px;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.btn.icon-circle {
+    border-radius: 1.2rem;
+}
+
 .btn.primary {
     background-color: var(--color-primary);
 }
