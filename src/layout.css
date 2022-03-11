@@ -516,4 +516,8 @@
     .mobile-row-fill {
         width: 100%;
     }
+
+    .mobile-row-end {
+        margin-left: auto;
+    }
 }

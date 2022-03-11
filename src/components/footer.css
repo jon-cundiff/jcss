@@ -11,11 +11,47 @@
 }
 
 .footer[class$="lighter"] {
-    color: var(--color-gray-dark);
+    color: var(--color-gray-darker);
 }
 
 .footer.primary {
     background-color: var(--color-primary);
+}
+
+.footer.primary-lighter {
+    background-color: var(--color-primary-lightest);
+}
+
+.footer.secondary {
+    background-color: var(--color-secondary);
+}
+
+.footer.secondary-lighter {
+    background-color: var(--color-secondary-lightest);
+}
+
+.footer.info {
+    background-color: var(--color-info);
+}
+
+.footer.info-lighter {
+    background-color: var(--color-info-lightest);
+}
+
+.footer.success {
+    background-color: var(--color-success);
+}
+
+.footer.success-lighter {
+    background-color: var(--color-success-lightest);
+}
+
+.footer.danger {
+    background-color: var(--color-danger);
+}
+
+.footer.danger-lighter {
+    background-color: var(--color-danger-lightest);
 }
 
 .footer a {
