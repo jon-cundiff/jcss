@@ -2,4 +2,5 @@
 @import url(./sizes.css);
 @import url(./reset.css);
 @import url(./layout.css);
+@import url(./components/footer.css);
 @import url(./components/button.css);
