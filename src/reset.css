@@ -19,10 +19,13 @@ dd {
     padding: 0;
 }
 
+html {
+    font-size: var(--font-size);
+}
+
 body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
-    font-size: 10px;
 }
 
 ul,

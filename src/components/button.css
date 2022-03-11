@@ -16,13 +16,13 @@
 
 .btn.icon-only,
 .btn.icon-circle {
-    padding: 10px;
-    width: 2.4rem;
-    height: 2.4rem;
+    padding: 0.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
 }
 
 .btn.icon-circle {
-    border-radius: 1.2rem;
+    border-radius: 1.6rem;
 }
 
 .btn.primary {
@@ -103,4 +103,17 @@
 
 .btn.info:disabled {
     background-color: var(--color-info-lightest);
+}
+
+@media screen and (min-width: 600px) {
+    .btn.icon-only,
+    .btn.icon-circle {
+        padding: 0.5rem;
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .btn.icon-circle {
+        border-radius: 1.2rem;
+    }
 }

@@ -1,0 +1,13 @@
+:root {
+    --font-base: 10px;
+    --font-size: var(--font-base);
+    --gap-base: 1rem;
+    --padding-base: 0.5rem;
+    --margin-base: 0.5rem;
+}
+
+@media screen and (min-width: 600px) {
+    :root {
+        --font-size: calc(var(--font-base) * 1.5);
+    }
+}
