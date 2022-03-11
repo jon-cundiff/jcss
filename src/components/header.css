@@ -1,0 +1,102 @@
+.header,
+.header-items {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.header {
+    padding: 0.5rem;
+    font-weight: bolder;
+    position: relative;
+}
+
+.header-logo {
+    max-height: 2.5rem;
+}
+
+.header:is(.primary, .secondary, .info, .success, .danger) {
+    color: var(--color-white);
+}
+
+.header[class$="lighter"] {
+    color: var(--color-gray-darker);
+}
+
+.header.primary {
+    background-color: var(--color-primary);
+}
+
+.header.primary-lighter {
+    background-color: var(--color-primary-lightest);
+}
+
+.header.secondary {
+    background-color: var(--color-secondary);
+}
+
+.header.secondary-lighter {
+    background-color: var(--color-secondary-lightest);
+}
+
+.header.info {
+    background-color: var(--color-info);
+}
+
+.header.info-lighter {
+    background-color: var(--color-info-lightest);
+}
+
+.header.success {
+    background-color: var(--color-success);
+}
+
+.header.success-lighter {
+    background-color: var(--color-success-lightest);
+}
+
+.header.danger {
+    background-color: var(--color-danger);
+}
+
+.header.danger-lighter {
+    background-color: var(--color-danger-lightest);
+}
+
+.header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 599px) {
+    .header-logo {
+        align-self: flex-start;
+        margin-left: 3rem;
+    }
+
+    .header-items {
+        position: absolute;
+        display: none;
+    }
+
+    .header-items.active {
+        position: static;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .header,
+    .header-items {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .header {
+        padding: 0.5rem 2rem;
+    }
+}
