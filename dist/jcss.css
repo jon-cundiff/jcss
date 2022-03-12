@@ -99,9 +99,6 @@ img {
 .align-center {
   align-items: center;
 }
-.align-between {
-  justify-content: z;
-}
 .justify-start {
   justify-content: flex-start;
 }
@@ -549,7 +546,8 @@ img {
   font-weight: bolder;
   position: relative;
 }
-.header-logo {
+.header-logo,
+.header-logo img {
   max-height: 2.5rem;
 }
 .header:is(.primary, .secondary, .info, .success, .danger) {
@@ -605,6 +603,11 @@ img {
     position: static;
     display: flex;
   }
+  .header-item,
+  .header-item * {
+    width: 100%;
+    text-align: center;
+  }
 }
 @media screen and (min-width: 600px) {
   .header,
@@ -616,6 +619,9 @@ img {
   }
   .header {
     padding: 0.5rem 2rem;
+  }
+  .mobile-toggle {
+    display: none;
   }
 }
 
