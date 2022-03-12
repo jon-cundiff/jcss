@@ -28,10 +28,6 @@
     align-items: center;
 }
 
-.align-between {
-    justify-content: z;
-}
-
 .justify-start {
     justify-content: flex-start;
 }
