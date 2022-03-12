@@ -71,6 +71,102 @@
     text-decoration: none;
 }
 
+.mobile-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 0.4rem;
+    padding: 0.2rem 0.5rem 0.8rem;
+    display: inline-block;
+    cursor: pointer;
+    color: inherit;
+    background-color: transparent;
+    border: 1px solid;
+    border-radius: 0.7rem;
+    margin: 0;
+}
+
+.mobile-toggle:hover,
+.mobile-toggle.active:hover {
+    opacity: 0.5;
+}
+
+.header:is(.primary, .secondary, .info, .success, .danger) .mobile-toggle {
+    border-color: var(--color-white);
+}
+
+.header[class$="lighter"] .mobile-toggle {
+    border-color: var(--color-gray-darker);
+}
+
+.toggle-box {
+    width: 2rem;
+    height: 0.5rem;
+    display: inline-block;
+    position: relative;
+}
+
+.toggle-inner {
+    display: block;
+    top: auto;
+    bottom: 0;
+    margin-top: -2px;
+}
+
+.header:is(.primary, .secondary, .info, .success, .danger) .toggle-inner,
+.header:is(.primary, .secondary, .info, .success, .danger)
+    .toggle-inner::before,
+.header:is(.primary, .secondary, .info, .success, .danger)
+    .toggle-inner::after {
+    background-color: var(--color-white);
+}
+
+.header[class$="lighter"] .toggle-inner,
+.header[class$="lighter"] .toggle-inner::before,
+.header[class$="lighter"] .toggle-inner::after {
+    background-color: var(--color-gray-darker);
+}
+
+.toggle-inner,
+.toggle-inner::before,
+.toggle-inner::after {
+    width: 2rem;
+    height: 0.3rem;
+    border-radius: 0.4rem;
+    position: absolute;
+}
+
+.toggle-inner::before,
+.toggle-inner::after {
+    content: "";
+    display: block;
+}
+
+.toggle-inner::before {
+    top: 0.5rem;
+}
+
+.toggle-inner::after {
+    bottom: 0.5rem;
+}
+
+.mobile-toggle.active .toggle-inner {
+    transform: translate3d(0, -0.5rem, 0) rotate(-45deg);
+}
+
+.mobile-toggle.active .toggle-box {
+    top: 5px;
+}
+
+.mobile-toggle.active .toggle-inner::before {
+    top: auto;
+    transform: rotate(-90deg);
+}
+
+.mobile-toggle.active .toggle-inner::after {
+    top: auto;
+    opacity: 0;
+}
+
 @media screen and (max-width: 599px) {
     .header-logo {
         align-self: flex-start;
@@ -107,7 +203,7 @@
         padding: 0.5rem 2rem;
     }
 
-    .mobile-toggle {
+    /* .mobile-toggle {
         display: none;
-    }
+    } */
 }
