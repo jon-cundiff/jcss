@@ -698,6 +698,9 @@ img {
   .header {
     padding: 0.5rem 2rem;
   }
+  .mobile-toggle {
+    display: none;
+  }
 }
 
 /* src/components/button.css */
