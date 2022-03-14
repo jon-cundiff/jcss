@@ -184,7 +184,7 @@
     }
 
     .header-item,
-    .header-item * {
+    .header-item :is(a, p, button) {
         width: 100%;
         text-align: center;
     }
