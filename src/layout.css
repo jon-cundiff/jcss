@@ -516,4 +516,31 @@
     .mobile-row-end {
         margin-left: auto;
     }
+
+    .row-wrap {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .row-wrap > * {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .row-wrap > * {
+        width: 23%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .row-wrap > * {
+        width: 18%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .row-wrap > * {
+        width: 14%;
+    }
 }
