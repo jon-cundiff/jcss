@@ -7,8 +7,7 @@
         "colors": "node colorGenerator.js write",
         "build": "rm -rf ./dist && npm run compile && npm run condense",
         "compile": "esbuild --bundle ./src/jcss.css --outfile=./dist/jcss.css",
-        "condense": "cleancss -o ./dist/jcss.min.css -O2 ./dist/jcss.css",
-        "publish": "npm run build && npm publish"
+        "condense": "cleancss -o ./dist/jcss.min.css -O2 ./dist/jcss.css"
     },
     "repository": {
         "type": "git",
