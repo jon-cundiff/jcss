@@ -129,27 +129,27 @@
 }
 
 .fgy-0 {
-    column-gap: 0;
+    row-gap: 0;
 }
 
 .fgy-1 {
-    column-gap: calc(var(--gap-base) * 0.25);
+    row-gap: calc(var(--gap-base) * 0.25);
 }
 
 .fgy-2 {
-    column-gap: calc(var(--gap-base) * 0.5);
+    row-gap: calc(var(--gap-base) * 0.5);
 }
 
 .fgy-3 {
-    column-gap: var(--gap-base);
+    row-gap: var(--gap-base);
 }
 
 .fgy-4 {
-    column-gap: calc(var(--gap-base) * 1.5);
+    row-gap: calc(var(--gap-base) * 1.5);
 }
 
 .fgy-5 {
-    column-gap: calc(var(--gap-base) * 2);
+    row-gap: calc(var(--gap-base) * 2);
 }
 
 .m-0 {
