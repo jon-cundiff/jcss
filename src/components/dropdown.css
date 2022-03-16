@@ -1,0 +1,127 @@
+.dropdown {
+    background: transparent;
+    position: relative;
+    width: min-content;
+    padding: var(--padding-base);
+    border-radius: 0.5rem;
+}
+
+.dropdown-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0.5rem;
+}
+
+.dropdown:hover .dropdown-hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.dropdown:active .dropdown-hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.dropdown :is(span, i) {
+    position: relative;
+    z-index: 2;
+}
+
+.dropdown:is(.primary, .secondary, .info, .success, .danger) {
+    color: var(--color-white);
+}
+
+.dropdown[class$="lighter"] {
+    color: var(--color-gray-darker);
+}
+
+.dropdown.primary,
+.dropdown.primary .dropdown-items {
+    background-color: var(--color-primary);
+}
+
+.dropdown.primary-lighter,
+.dropdown.primary-lighter .dropdown-items {
+    background-color: var(--color-primary-lighter);
+}
+
+.dropdown.secondary,
+.dropdown.secondary .dropdown-items {
+    background-color: var(--color-secondary);
+}
+
+.dropdown.secondary-lighter,
+.dropdown.secondary-lighter .dropdown-items {
+    background-color: var(--color-secondary-lighter);
+}
+
+.dropdown.info,
+.dropdown.info .dropdown-items {
+    background-color: var(--color-info);
+}
+
+.dropdown.info-lighter,
+.dropdown.info-lighter .dropdown-items {
+    background-color: var(--color-info-lighter);
+}
+
+.dropdown.success,
+.dropdown.success .dropdown-items {
+    background-color: var(--color-success);
+}
+
+.dropdown.success-lighter,
+.dropdown.success-lighter .dropdown-items {
+    background-color: var(--color-success-lighter);
+}
+
+.dropdown.danger,
+.dropdown.danger .dropdown-items {
+    background-color: var(--color-danger);
+}
+
+.dropdown.danger-lighter,
+.dropdown.danger-lighter .dropdown-items {
+    background-color: var(--color-danger-lighter);
+}
+
+.dropdown-caret::after {
+    font-family: Arial, Helvetica, sans-serif;
+    content: "\25bc";
+    margin-left: 1rem;
+}
+
+.dropdown-container {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+}
+
+.dropdown-items {
+    position: absolute;
+    display: none;
+    border-radius: 0.5rem;
+    top: 2.2em;
+    left: 0;
+    width: 200px;
+    z-index: 5;
+    box-shadow: 2px 2px 10px rgba(10, 10, 10, 0.6);
+}
+
+.dropdown:hover .dropdown-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdown-items > * {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.dropdown-items > *:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
