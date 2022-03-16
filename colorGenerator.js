@@ -20,12 +20,13 @@ const buildCSS = (keys) => {
     for (const [key, value] of Object.entries(colorKeys)) {
         const colorSwatch = chroma.scale(["white", value, "black"]).colors(21);
         appendCssVar(colorSwatch, key, 10);
-        appendCssVar(colorSwatch, key, 3, "lightest");
+        appendCssVar(colorSwatch, key, 6, "medium-light");
         appendCssVar(colorSwatch, key, 5, "lighter");
+        appendCssVar(colorSwatch, key, 3, "lightest");
         appendCssVar(colorSwatch, key, 13, "dark");
     }
     cssString +=
-        "\t--color-white: #fff;\n\t--color-gray-light: #f1f1f1;\n\t--color-gray-medium: #d4d4d4;\n\t--color-gray-dark: #6b6b6b;\n\t--color-gray-darker: #3e3e3e;\n}";
+        "\t--color-white: #fff;\n\t--color-gray-light: #f1f1f1;\n\t--color-gray-medium: #a4a4a4;\n\t--color-gray-dark: #6b6b6b;\n\t--color-gray-darker: #505050;\n}";
 
     return cssString;
 };
