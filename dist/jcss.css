@@ -2,31 +2,36 @@
 
 /* src/colors.css */
 :root {
-  --color-primary: #6e41e2;
-  --color-primary-lightest: #c5b3f3;
-  --color-primary-lighter: #8b67e8;
-  --color-primary-dark: #4d2e9e;
-  --color-secondary: #2daf93;
-  --color-secondary-lightest: #abdfd4;
-  --color-secondary-lighter: #57bfa9;
-  --color-secondary-dark: #207b67;
-  --color-info: #428bf9;
-  --color-info-lightest: #b3d1fd;
-  --color-info-lighter: #68a2fa;
-  --color-info-dark: #2e61ae;
-  --color-danger: #c7302b;
-  --color-danger-lightest: #e9acaa;
-  --color-danger-lighter: #d25955;
-  --color-danger-dark: #8b221e;
-  --color-success: #27ae60;
-  --color-success-lightest: #a9dfbf;
-  --color-success-lighter: #52be80;
-  --color-success-dark: #1b7a43;
+  --color-primary: #0000bb;
+  --color-primary-medium-light: #6666d6;
+  --color-primary-lighter: #8080dd;
+  --color-primary-lightest: #b3b3eb;
+  --color-primary-dark: #000083;
+  --color-secondary: #b700b7;
+  --color-secondary-medium-light: #d466d4;
+  --color-secondary-lighter: #db80db;
+  --color-secondary-lightest: #e9b3e9;
+  --color-secondary-dark: #800080;
+  --color-info: #00bcb0;
+  --color-info-medium-light: #66d7d0;
+  --color-info-lighter: #80ded8;
+  --color-info-lightest: #b3ebe7;
+  --color-info-dark: #00847b;
+  --color-danger: #b20000;
+  --color-danger-medium-light: #d16666;
+  --color-danger-lighter: #d98080;
+  --color-danger-lightest: #e8b3b3;
+  --color-danger-dark: #7d0000;
+  --color-success: #00bb00;
+  --color-success-medium-light: #66d666;
+  --color-success-lighter: #80dd80;
+  --color-success-lightest: #b3ebb3;
+  --color-success-dark: #008300;
   --color-white: #fff;
   --color-gray-light: #f1f1f1;
-  --color-gray-medium: #d4d4d4;
+  --color-gray-medium: #a4a4a4;
   --color-gray-dark: #6b6b6b;
-  --color-gray-darker: #3e3e3e;
+  --color-gray-darker: #505050;
 }
 
 /* src/sizes.css */
@@ -863,10 +868,122 @@ img {
   position: absolute;
   top: 0;
   right: 2px;
+  transform: scaleX(1.3);
   font-size: 1.2rem;
 }
 .alert .close:hover {
   opacity: 0.7;
+}
+
+/* src/components/dropdown.css */
+.dropdown {
+  background: transparent;
+  position: relative;
+  width: min-content;
+  padding: var(--padding-base);
+  border-radius: 0.5rem;
+}
+.dropdown-hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+.dropdown:active .dropdown-hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.dropdown :is(span, i) {
+  position: relative;
+  z-index: 2;
+}
+.dropdown:is(.primary, .secondary, .info, .success, .danger) {
+  color: var(--color-white);
+}
+.dropdown[class$=lighter] {
+  color: var(--color-gray-darker);
+}
+.dropdown.primary,
+.dropdown.primary .dropdown-items {
+  background-color: var(--color-primary);
+}
+.dropdown.primary-lighter,
+.dropdown.primary-lighter .dropdown-items {
+  background-color: var(--color-primary-lightest);
+}
+.dropdown.secondary,
+.dropdown.secondary .dropdown-items {
+  background-color: var(--color-secondary);
+}
+.dropdown.secondary-lighter,
+.dropdown.secondary-lighter .dropdown-items {
+  background-color: var(--color-secondary-lightest);
+}
+.dropdown.info,
+.dropdown.info .dropdown-items {
+  background-color: var(--color-info);
+}
+.dropdown.info-lighter,
+.dropdown.info-lighter .dropdown-items {
+  background-color: var(--color-info-lightest);
+}
+.dropdown.success,
+.dropdown.success .dropdown-items {
+  background-color: var(--color-success);
+}
+.dropdown.success-lighter,
+.dropdown.success-lighter .dropdown-items {
+  background-color: var(--color-success-lightest);
+}
+.dropdown.danger,
+.dropdown.danger .dropdown-items {
+  background-color: var(--color-danger);
+}
+.dropdown.danger-lighter,
+.dropdown.danger-lighter .dropdown-items {
+  background-color: var(--color-danger-lightest);
+}
+.dropdown-caret::after {
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  content: "\25bc";
+  margin-left: 1rem;
+}
+.dropdown-container {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+}
+.dropdown-items {
+  position: absolute;
+  display: none;
+  border-radius: 0.5rem;
+  top: 2.2em;
+  left: 0;
+  width: 200px;
+  z-index: 5;
+  box-shadow: 2px 2px 10px rgba(10, 10, 10, 0.6);
+}
+.dropdown:hover .dropdown-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dropdown-items > * {
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+}
+.dropdown-items > *:hover {
+  background-color: rgba(255, 255, 255, 0.35);
 }
 
 /* src/components/button.css */
@@ -878,7 +995,7 @@ img {
   font-size: 1rem;
 }
 .btn:disabled {
-  color: var(--color-gray-dark);
+  color: var(--color-gray-medium);
 }
 .btn > i:not(:last-child) {
   margin-right: 0.4rem;
@@ -904,6 +1021,15 @@ img {
 .btn.primary:disabled {
   background-color: var(--color-primary-lightest);
 }
+.btn.primary-lighter {
+  background-color: var(--color-primary-lighter);
+}
+.btn.primary-lighter:hover {
+  background-color: var(--color-primary-lightest);
+}
+.btn.primary-lighter:active {
+  background-color: var(--color-primary-medium-light);
+}
 .btn.secondary {
   background-color: var(--color-secondary);
 }
@@ -915,6 +1041,15 @@ img {
 }
 .btn.secondary:disabled {
   background-color: var(--color-secondary-lightest);
+}
+.btn.secondary-lighter {
+  background-color: var(--color-secondary-lighter);
+}
+.btn.secondary-lighter:hover {
+  background-color: var(--color-secondary-lightest);
+}
+.btn.secondary-lighter:active {
+  background-color: var(--color-secondary-medium-light);
 }
 .btn.success {
   background-color: var(--color-success);
@@ -928,6 +1063,15 @@ img {
 .btn.success:disabled {
   background-color: var(--color-success-lightest);
 }
+.btn.success-lighter {
+  background-color: var(--color-success-lighter);
+}
+.btn.success-lighter:hover {
+  background-color: var(--color-success-lightest);
+}
+.btn.success-lighter:active {
+  background-color: var(--color-success-medium-light);
+}
 .btn.danger {
   background-color: var(--color-danger);
 }
@@ -940,6 +1084,15 @@ img {
 .btn.danger:disabled {
   background-color: var(--color-danger-lightest);
 }
+.btn.danger-lighter {
+  background-color: var(--color-danger-lighter);
+}
+.btn.danger-lighter:hover {
+  background-color: var(--color-danger-lightest);
+}
+.btn.danger-lighter:active {
+  background-color: var(--color-danger-medium-light);
+}
 .btn.info {
   background-color: var(--color-info);
 }
@@ -951,6 +1104,18 @@ img {
 }
 .btn.info:disabled {
   background-color: var(--color-info-lightest);
+}
+.btn.info-lighter {
+  background-color: var(--color-info-lighter);
+}
+.btn.info-lighter:hover {
+  background-color: var(--color-info-lightest);
+}
+.btn.info-lighter:active {
+  background-color: var(--color-info-medium-light);
+}
+.btn[class$=lighter]:disabled {
+  background-color: var(--color-gray-light);
 }
 @media screen and (min-width: 600px) {
   .btn.icon-only,

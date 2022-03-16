@@ -7,7 +7,7 @@
 }
 
 .btn:disabled {
-    color: var(--color-gray-dark);
+    color: var(--color-gray-medium);
 }
 
 .btn > i:not(:last-child) {
@@ -41,6 +41,18 @@
     background-color: var(--color-primary-lightest);
 }
 
+.btn.primary-lighter {
+    background-color: var(--color-primary-lighter);
+}
+
+.btn.primary-lighter:hover {
+    background-color: var(--color-primary-lightest);
+}
+
+.btn.primary-lighter:active {
+    background-color: var(--color-primary-medium-light);
+}
+
 .btn.secondary {
     background-color: var(--color-secondary);
 }
@@ -55,6 +67,18 @@
 
 .btn.secondary:disabled {
     background-color: var(--color-secondary-lightest);
+}
+
+.btn.secondary-lighter {
+    background-color: var(--color-secondary-lighter);
+}
+
+.btn.secondary-lighter:hover {
+    background-color: var(--color-secondary-lightest);
+}
+
+.btn.secondary-lighter:active {
+    background-color: var(--color-secondary-medium-light);
 }
 
 .btn.success {
@@ -73,6 +97,18 @@
     background-color: var(--color-success-lightest);
 }
 
+.btn.success-lighter {
+    background-color: var(--color-success-lighter);
+}
+
+.btn.success-lighter:hover {
+    background-color: var(--color-success-lightest);
+}
+
+.btn.success-lighter:active {
+    background-color: var(--color-success-medium-light);
+}
+
 .btn.danger {
     background-color: var(--color-danger);
 }
@@ -89,6 +125,18 @@
     background-color: var(--color-danger-lightest);
 }
 
+.btn.danger-lighter {
+    background-color: var(--color-danger-lighter);
+}
+
+.btn.danger-lighter:hover {
+    background-color: var(--color-danger-lightest);
+}
+
+.btn.danger-lighter:active {
+    background-color: var(--color-danger-medium-light);
+}
+
 .btn.info {
     background-color: var(--color-info);
 }
@@ -103,6 +151,22 @@
 
 .btn.info:disabled {
     background-color: var(--color-info-lightest);
+}
+
+.btn.info-lighter {
+    background-color: var(--color-info-lighter);
+}
+
+.btn.info-lighter:hover {
+    background-color: var(--color-info-lightest);
+}
+
+.btn.info-lighter:active {
+    background-color: var(--color-info-medium-light);
+}
+
+.btn[class$="lighter"]:disabled {
+    background-color: var(--color-gray-light);
 }
 
 @media screen and (min-width: 600px) {

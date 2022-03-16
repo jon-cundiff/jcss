@@ -42,7 +42,7 @@
 
 .dropdown.primary-lighter,
 .dropdown.primary-lighter .dropdown-items {
-    background-color: var(--color-primary-lighter);
+    background-color: var(--color-primary-lightest);
 }
 
 .dropdown.secondary,
@@ -52,7 +52,7 @@
 
 .dropdown.secondary-lighter,
 .dropdown.secondary-lighter .dropdown-items {
-    background-color: var(--color-secondary-lighter);
+    background-color: var(--color-secondary-lightest);
 }
 
 .dropdown.info,
@@ -62,7 +62,7 @@
 
 .dropdown.info-lighter,
 .dropdown.info-lighter .dropdown-items {
-    background-color: var(--color-info-lighter);
+    background-color: var(--color-info-lightest);
 }
 
 .dropdown.success,
@@ -72,7 +72,7 @@
 
 .dropdown.success-lighter,
 .dropdown.success-lighter .dropdown-items {
-    background-color: var(--color-success-lighter);
+    background-color: var(--color-success-lightest);
 }
 
 .dropdown.danger,
@@ -82,7 +82,7 @@
 
 .dropdown.danger-lighter,
 .dropdown.danger-lighter .dropdown-items {
-    background-color: var(--color-danger-lighter);
+    background-color: var(--color-danger-lightest);
 }
 
 .dropdown-caret::after {
