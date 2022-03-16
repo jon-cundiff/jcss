@@ -52,6 +52,7 @@
     position: absolute;
     top: 0;
     right: 2px;
+    transform: scaleX(1.3);
     font-size: 1.2rem;
 }
 
