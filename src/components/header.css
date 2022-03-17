@@ -71,6 +71,14 @@
     text-decoration: none;
 }
 
+.header-item {
+    padding: 0.5rem;
+}
+
+.header-item:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 .mobile-toggle {
     position: absolute;
     right: 1rem;
@@ -200,7 +208,7 @@
     }
 
     .header {
-        padding: 0.5rem 2rem;
+        padding: 0 2rem;
     }
 
     .mobile-toggle {
