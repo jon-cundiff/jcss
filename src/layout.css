@@ -11,7 +11,7 @@
         * Use JS to set CSS var --vh 
         * Allows footer to be after content and at least at bottom of view
     */
-    height: calc(var(--vh, 1vh) * 100);
+    min-height: calc(var(--vh, 1vh) * 100);
     padding: 0;
     flex-direction: column;
 }
