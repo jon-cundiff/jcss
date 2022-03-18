@@ -1,6 +1,6 @@
 {
     "name": "@jon-cundiff/jcss",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "Minimizes css for JCSS",
     "main": "index.js",
     "scripts": {
